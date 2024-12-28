@@ -1,13 +1,12 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { Button } from 'react-native-paper';
+import { StyleSheet,View } from 'react-native';
+import { Button, Text } from 'react-native-paper';
 
 import { Cover } from '@/components/cover';
 import {
   FocusAwareStatusBar,
   SafeAreaView,
-  Text,
-  View,
 } from '@/components/ui';
 import { useIsFirstTime } from '@/lib/hooks';
 export default function Onboarding() {
@@ -19,8 +18,8 @@ export default function Onboarding() {
       <View className="w-full flex-1">
         <Cover />
       </View>
-      <View className="justify-end ">
-        <Text className="my-3 text-center text-5xl font-bold">
+      <View style={styles.container}>
+        <Text variant="headlineLarge">
           Obytes Starter
         </Text>
         <Text className="mb-2 text-center text-lg text-gray-600">
@@ -54,3 +53,11 @@ export default function Onboarding() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
