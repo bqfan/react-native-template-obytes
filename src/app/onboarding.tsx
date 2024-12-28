@@ -1,9 +1,9 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
+import { Button } from 'react-native-paper';
 
 import { Cover } from '@/components/cover';
 import {
-  Button,
   FocusAwareStatusBar,
   SafeAreaView,
   Text,
@@ -42,12 +42,14 @@ export default function Onboarding() {
       </View>
       <SafeAreaView className="mt-6">
         <Button
-          label="Let's Get Started "
+          mode="contained"
           onPress={() => {
             setIsFirstTime(false);
             router.replace('/login');
           }}
-        />
+        >
+          Let's Get Started
+        </Button>
       </SafeAreaView>
     </View>
   );

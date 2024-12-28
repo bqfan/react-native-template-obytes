@@ -3,11 +3,11 @@ import { Stack } from 'expo-router';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import { showMessage } from 'react-native-flash-message';
+import { Button } from 'react-native-paper';
 import { z } from 'zod';
 
 import { useAddPost } from '@/api';
 import {
-  Button,
   ControlledInput,
   showErrorMessage,
   View,
@@ -68,11 +68,13 @@ export default function AddPost() {
           testID="body-input"
         />
         <Button
-          label="Add Post"
+          mode="contained"
           loading={isPending}
-          onPress={handleSubmit(onSubmit)}
           testID="add-post-button"
-        />
+          onPress={handleSubmit(onSubmit)}
+        >
+          Add Post
+        </Button>
       </View>
     </>
   );

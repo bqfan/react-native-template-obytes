@@ -3,9 +3,10 @@ import React from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import { KeyboardAvoidingView } from 'react-native-keyboard-controller';
+import { Button } from 'react-native-paper';
 import * as z from 'zod';
 
-import { Button, ControlledInput, Text, View } from '@/components/ui';
+import { ControlledInput, Text, View } from '@/components/ui';
 
 const schema = z.object({
   name: z.string().optional(),
@@ -74,10 +75,12 @@ export const LoginForm = ({ onSubmit = () => {} }: LoginFormProps) => {
           secureTextEntry={true}
         />
         <Button
+          mode="contained"
           testID="login-button"
-          label="Login"
           onPress={handleSubmit(onSubmit)}
-        />
+        >
+          Login
+        </Button>
       </View>
     </KeyboardAvoidingView>
   );
