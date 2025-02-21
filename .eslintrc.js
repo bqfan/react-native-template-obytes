@@ -14,6 +14,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
+  ignorePatterns: ['src/components/ui/*'],
   rules: {
     'prettier/prettier': 'warn',
     'unicorn/filename-case': [
