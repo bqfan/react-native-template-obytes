@@ -39,6 +39,71 @@ module.exports = {
     800: '#CC5600',
     900: '#B24C00',
   },
+  // Blue Colors (Trust and Professionalism)
+  blue: {
+    50: '#ebf5ff', // Lightest blue
+    100: '#d0ebff',
+    200: '#a9dcff',
+    300: '#82ccff',
+    400: '#5bbdff', // Light blue
+    500: '#3399ff', // Primary blue
+    600: '#007bff', // Deeper blue
+    700: '#005bb5',
+    800: '#003f7f',
+    900: '#002654',
+  },
+  // Secondary Colors (Healing and Freshness)
+  green: {
+    50: '#e6ffed', // Lightest green
+    100: '#ccffd9',
+    200: '#99ffb3',
+    300: '#66ff8d',
+    400: '#33ff66', // Light green
+    500: '#00e64d', // Primary green
+    600: '#00b83e', // Deeper green
+    700: '#008a2e',
+    800: '#005c1f',
+    900: '#003d14',
+  },
+  // Accent Colors (Compassion and Warmth)
+  accent: {
+    50: '#fce8f3', // Lightest pink
+    100: '#f9d0e6',
+    200: '#f2a3cc',
+    300: '#ea76b3',
+    400: '#e24a99', // Light pink
+    500: '#d91d80', // Primary pink
+    600: '#b61566', // Deeper pink
+    700: '#8a104d',
+    800: '#5d0a33',
+    900: '#30041a',
+  },
+  // Gray Colors (Cleanliness and Simplicity)
+  gray: {
+    50: '#f9fafb', // Lightest gray
+    100: '#f3f4f6',
+    200: '#e5e7eb',
+    300: '#d1d5db',
+    400: '#9ca3af', // Mid gray
+    500: '#6b7280', // Primary neutral
+    600: '#4b5563', // Dark gray
+    700: '#374151',
+    800: '#1f2937',
+    900: '#111827',
+  },
+  // Teal (Modern and Invigorating)
+  teal: {
+    50: '#e6fffa', // Lightest teal
+    100: '#b2f5ea',
+    200: '#81e6d9',
+    300: '#4fd1c5',
+    400: '#38b2ac', // Light teal
+    500: '#319795', // Primary teal
+    600: '#2c7a7b', // Deeper teal
+    700: '#285e61',
+    800: '#234e52',
+    900: '#1d4044',
+  },
   success: {
     50: '#F0FDF4',
     100: '#DCFCE7',
