@@ -45,7 +45,7 @@ export default function Onboarding() {
     <View className="flex h-full items-center justify-center">
       <FocusAwareStatusBar />
 
-      <SafeAreaView className="mt-6">
+      <SafeAreaView className="mt-4">
         <Image
           source={require('../../assets/images/healthq-splash-icon.png')}
           style={{
@@ -85,7 +85,7 @@ export default function Onboarding() {
         </PagerView>
 
         {/* Pagination Dots */}
-        <View className="-mb-2 flex-row justify-center">
+        <View className="-mb-12 flex-row justify-center">
           {onboardingContent.map((_, index) => (
             <View
               key={index.toString()}
@@ -97,21 +97,7 @@ export default function Onboarding() {
         </View>
       </View>
 
-      {/* Existing Features List */}
-      {/* <View className="justify-end px-4">
-        <Text className="my-1 pt-6 text-left text-lg">🚀 Production-ready</Text>
-        <Text className="my-1 text-left text-lg">
-          🥷 Developer experience + Productivity
-        </Text>
-        <Text className="my-1 text-left text-lg">
-          � Minimal code and dependencies
-        </Text>
-        <Text className="my-1 text-left text-lg">
-          💪 Well maintained third-party libraries
-        </Text>
-      </View> */}
-
-      <SafeAreaView className="mt-6">
+      <SafeAreaView className="mt-12">
         <Button
           label="Let's Get Started"
           onPress={() => {
