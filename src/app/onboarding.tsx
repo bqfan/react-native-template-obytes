@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { Image } from 'react-native';
+import { Dimensions, Image } from 'react-native';
 import PagerView from 'react-native-pager-view';
 
 import {
@@ -16,19 +16,24 @@ const onboardingContent = [
   {
     image: require('../../assets/images/onboarding1.png'),
     title: 'Obytes Starter',
-    description: 'The right way to build your mobile app',
+    description:
+      '👏 Welcome to the Obytes Mobile Tribe’s Expo / React Native Starter Kit!',
   },
   {
     image: require('../../assets/images/onboarding2.png'),
     title: 'Production Ready',
-    description: '🚀 Built with best practices in mind',
+    description:
+      ' 🚀 We wanted to ensure that this starter was ready for real-world use, providing a solid foundation for building production-grade apps.',
   },
   {
     image: require('../../assets/images/onboarding3.png'),
-    title: 'Developer Experience',
-    description: '🥷 Focus on productivity and efficiency',
+    title: 'Developer experience and productivity',
+    description:
+      '🥷  Our focus was on creating a starter that would enhance the developer experience and increase productivity.',
   },
 ];
+
+const { width } = Dimensions.get('window');
 
 // eslint-disable-next-line max-lines-per-function
 export default function Onboarding() {
@@ -40,8 +45,20 @@ export default function Onboarding() {
     <View className="flex h-full items-center justify-center">
       <FocusAwareStatusBar />
 
+      <SafeAreaView className="mt-6">
+        <Image
+          source={require('../../assets/images/healthq-splash-icon.png')}
+          style={{
+            width: width * 0.3,
+            height: width * 0.3,
+          }}
+          className="mb-0"
+          resizeMode="contain"
+        />
+      </SafeAreaView>
+
       {/* Carousel Section */}
-      <View className="w-full flex-1">
+      <View className="-mt-32 w-full flex-1">
         <PagerView
           style={{ flex: 1 }} // ← Required inline style
           initialPage={0}
@@ -68,7 +85,7 @@ export default function Onboarding() {
         </PagerView>
 
         {/* Pagination Dots */}
-        <View className="mb-4 flex-row justify-center">
+        <View className="-mb-2 flex-row justify-center">
           {onboardingContent.map((_, index) => (
             <View
               key={index.toString()}
@@ -81,7 +98,7 @@ export default function Onboarding() {
       </View>
 
       {/* Existing Features List */}
-      <View className="justify-end px-4">
+      {/* <View className="justify-end px-4">
         <Text className="my-1 pt-6 text-left text-lg">🚀 Production-ready</Text>
         <Text className="my-1 text-left text-lg">
           🥷 Developer experience + Productivity
@@ -92,7 +109,7 @@ export default function Onboarding() {
         <Text className="my-1 text-left text-lg">
           💪 Well maintained third-party libraries
         </Text>
-      </View>
+      </View> */}
 
       <SafeAreaView className="mt-6">
         <Button
@@ -102,6 +119,12 @@ export default function Onboarding() {
             router.replace('/login');
           }}
         />
+        <Text className="my-1 text-left text-lg">
+          🧩 Minimal code and dependencies
+        </Text>
+        <Text className="my-1 text-left text-lg">
+          💪 Well-maintained third-party libraries
+        </Text>
       </SafeAreaView>
     </View>
   );
