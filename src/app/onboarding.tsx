@@ -13,8 +13,8 @@ import {
 import { useIsFirstTime } from '@/lib/hooks';
 
 const { width, height } = Dimensions.get('window');
-const HEADER_PERCENTAGE = 20; // % of screen height
-const CAROUSEL_PERCENTAGE = 40; // % of screen height
+const HEADER_PERCENTAGE = 25; // % of screen height
+const CAROUSEL_PERCENTAGE = 50; // % of screen height
 const BOTTOM_PERCENTAGE = 15; // % of screen height
 
 const onboardingContent = [
@@ -88,10 +88,10 @@ export default function Onboarding() {
                 }}
                 className="mb-4"
               />
-              <Text className="mb-2 px-4 text-center text-2xl font-bold">
+              <Text className="mb-2 px-4 text-center text-lg font-bold">
                 {page.title}
               </Text>
-              <Text className="px-4 text-center text-base text-gray-600">
+              <Text className="px-4 text-center text-sm text-gray-600">
                 {page.description}
               </Text>
             </View>
@@ -99,7 +99,7 @@ export default function Onboarding() {
         </PagerView>
 
         {/* Pagination Dots */}
-        <View className="absolute -bottom-5 w-full">
+        <View className="absolute bottom-2 w-full">
           <View className="flex-row justify-center">
             {onboardingContent.map((_, index) => (
               <View
@@ -126,10 +126,10 @@ export default function Onboarding() {
         </View>
       </SafeAreaView>
       <View className="flex items-center  justify-center">
-        <Text className="my-1 text-left text-lg">
+        <Text className="my-1 text-left text-sm">
           🧩 Minimal code and dependencies
         </Text>
-        <Text className="my-1 text-left text-lg">
+        <Text className="my-1 text-left text-sm">
           💪 well maintained third-party libraries
         </Text>
       </View>
