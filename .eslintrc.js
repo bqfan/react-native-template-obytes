@@ -1,7 +1,12 @@
-const path = require('path');
+const path = require('node:path');
 
 module.exports = {
-  extends: ['expo', 'plugin:tailwindcss/recommended', 'prettier'],
+  extends: [
+    'expo',
+    'plugin:tailwindcss/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   plugins: [
     'prettier',
     'unicorn',
